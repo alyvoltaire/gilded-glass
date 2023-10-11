@@ -33,7 +33,7 @@ header {
     border:none;
 } 
 
-#menu.active{
+#list.active{
     display: flex; 
 }
 
@@ -42,12 +42,13 @@ header {
 }
 
 nav {
-    background-color: rgba(0, 0, 0, 0.474);
+    background-color: rgba(0, 0, 0, 0.666);
     padding: 0.625rem;
     display: flex;
     flex-direction: row;
     font-family: var(--heading-font);
     height: 3.125rem;
+    justify-content: space-between;
 } 
 
 nav a {
@@ -101,7 +102,9 @@ nav ul{
 }  
 
 #drinks h2{
-    margin: auto; 
+    margin: auto;
+    text-align: center; 
+    padding: 1.875rem;
 }
 
 .drink {
@@ -137,9 +140,15 @@ button{
     margin: 0;
     background-color: white; 
     color: var(--secondary-color);
-    border-radius: 3px;
-    border: none;
+    border-radius: 0.1875rem;
+    border: none; 
+    padding: 0.3125rem;
 } 
+
+#more{
+    margin: 1.5625rem;
+    margin-left: 46.5625rem;
+}
 
 .hero-bottom{
     background-image: url(../images/bottom.jpg);
@@ -152,8 +161,10 @@ button{
 } 
 
 .hero-bottom p{
+    text-align: center;
     max-width: 62.4375rem; 
-    color: white;
+    text-shadow: 0.0625rem 0.0625rem 0.125rem #000;
+    color: white; 
 } 
 
 @media screen and (max-width: 48em){
@@ -167,6 +178,10 @@ button{
         justify-content: center; 
         align-items: center;
     } 
+    
+    .hero p{
+        text-shadow: 0.0625rem 0.0625rem 0.125rem #000;
+    }
 
     #about{
         display: flex;
@@ -177,11 +192,11 @@ button{
         margin: auto;
     } 
 
-    .hero-bottom{
-         
-        
+    #more{
+        margin: 1.5625rem;
+        margin-left: 23.125rem;
     }
-
+    
     .hero-bottom p{
         max-width: 40.625rem; 
         color: white;
@@ -218,17 +233,27 @@ button{
     } 
 
     .about-content{
-        max-width: 350px; 
+        max-width: 21.875rem; 
     }
 
     .drinks-gallery {
         display: grid; 
         grid-template-columns: 1fr
     } 
+    
+    #more{
+        margin: 1.5625rem;
+        margin-left: 12.5rem;
+    }
 
     .hero-bottom p{
-        max-width: 350px; 
+        max-width: 21.875rem; 
         color: white;
     }
 } 
 
+@media screen and (min-width: 87em){
+    .hero-bottom{
+        min-height: 34rem;
+    }
+}
